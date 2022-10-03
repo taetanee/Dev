@@ -12,3 +12,7 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
+
+//윈도우 컴퓨터 한글 컴파일 오류
+compileJava.options.encoding = 'UTF-8'
