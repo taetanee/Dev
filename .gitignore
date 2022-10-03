@@ -4,6 +4,7 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
+gradle/
 
 ### STS ###
 .apt_generated
@@ -38,4 +39,4 @@ out/
 
 
 ### private coding test ###
-/src/main/java/com/web/dev/devprivte/
+/src/main/java/dev/devprivte/
