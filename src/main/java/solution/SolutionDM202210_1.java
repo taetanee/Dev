@@ -2,7 +2,7 @@ package solution;
 
 import java.util.*;
 
-public class SolutionDevMatching202210_1 {
+public class SolutionDM202210_1 {
 
     //문자열 길이 3~6
     //숫자 길이 0~6 ( null 가능, "0"은 안됨, 즉 "000"은 안됨 )
@@ -14,7 +14,7 @@ public class SolutionDevMatching202210_1 {
         //DevMatching2022_02_1 s2 = new DevMatching2022_02_1();
         //s2.solution(new String[]{"cow", "cow1", "cow2", "cow3", "cow4", "cow9", "cow8", "cow7", "cow6", "cow5"}, "cow");
 
-        SolutionDevMatching202210_1 s3 = new SolutionDevMatching202210_1();
+        SolutionDM202210_1 s3 = new SolutionDM202210_1();
         s3.solution(new String[]{"bird99", "bird98", "bird101","gotoxy"}, "bird98");
 
         //DevMatching2022_02_1 s4 = new DevMatching2022_02_1();
