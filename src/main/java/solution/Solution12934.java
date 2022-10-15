@@ -14,13 +14,24 @@ public class Solution12934 {
         System.out.println(s2.solution(3));//-1
     }
 
+//    public long solution(long n) {
+//        long answer = 0;
+//        double tempN = Math.sqrt(n);
+//        if (Math.ceil(tempN) * Math.ceil(tempN) != n) {
+//            return -1;
+//        }
+//        answer = (long) Math.pow(tempN + 1, 2);
+//        return answer;
+//    }
+
     public long solution(long n) {
         long answer = 0;
-        double tempN = Math.sqrt(n);
-        if (Math.ceil(tempN) * Math.ceil(tempN) != n) {
+        long nSqrt = (long) Math.sqrt(n);
+        if( Math.ceil(nSqrt) * Math.ceil(nSqrt) != n ){
             return -1;
         }
-        answer = (long) Math.pow(tempN + 1, 2);
+        answer = (long) Math.pow(nSqrt + 1,2);
+
         return answer;
     }
 }
