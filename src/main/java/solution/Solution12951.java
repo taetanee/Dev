@@ -10,10 +10,10 @@ import common.CommonUtil;
 public class Solution12951 {
 	public static void main(String[] args) {
 		Solution12951 s1 = new Solution12951();
-        System.out.println(s1.solution("3people unFollowed me"));
+		System.out.println(s1.solution("3people unFollowed me"));
 
 		Solution12951 s2 = new Solution12951();
-        System.out.println(s2.solution("For The Last Week"));
+		System.out.println(s2.solution("For The Last Week"));
 	}
 
 //	public String solution(String s) {
@@ -43,24 +43,24 @@ public class Solution12951 {
 		String answer = "";
 
 		for (int i = 0; i < s.length(); i++) {
-		    boolean upperFlag = false;
-		    char c = s.charAt(i);
+			boolean upperFlag = false;
+			char c = s.charAt(i);
 
-		    if( i == 0 ){
-                upperFlag = true;
-            } else if( i >= 1 && s.charAt(i-1) == ' '){
-                upperFlag = true;
-            } else if( i >= 1 && s.charAt(i-1) != ' '){
-                upperFlag = false;
-            } else {
-                upperFlag = false;
-            }
+			if (i == 0) {
+				upperFlag = true;
+			} else if (i >= 1 && s.charAt(i - 1) == ' ') {
+				upperFlag = true;
+			} else if (i >= 1 && s.charAt(i - 1) != ' ') {
+				upperFlag = false;
+			} else {
+				upperFlag = false;
+			}
 
-		    if( upperFlag == true ){
-                answer += Character.toUpperCase(c);
-            } else {
-                answer += Character.toLowerCase(c);
-            }
+			if (upperFlag == true) {
+				answer += Character.toUpperCase(c);
+			} else {
+				answer += Character.toLowerCase(c);
+			}
 		}
 
 		return answer;

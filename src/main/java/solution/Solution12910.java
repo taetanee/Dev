@@ -21,33 +21,33 @@ public class Solution12910 {
 	}
 
 	public int[] solution(int[] arr, int divisor) {
-	    //[시작] set arrayList
+		//[시작] set arrayList
 		ArrayList<Integer> arrayList = new ArrayList();
 		for (int i = 0; i < arr.length; i++) {
 			if (arr[i] % divisor == 0) {
 				arrayList.add(arr[i]);
 			}
 		}
-        //[종료] set arrayList
+		//[종료] set arrayList
 
 		//[시작] sort arrayList
-        Collections.sort(arrayList);
+		Collections.sort(arrayList);
 		//[종료] sort arrayList
 
 		//[시작] return no data
-		if( arrayList.size() == 0 ){
-            return new int[]{-1};
-        }
+		if (arrayList.size() == 0) {
+			return new int[]{-1};
+		}
 		//[종료] return no data
 
-        //[시작] set answer
+		//[시작] set answer
 		int[] answer = new int[arrayList.size()];
 		int idx = 0;
-		for( int val : arrayList ){
+		for (int val : arrayList) {
 			answer[idx] = val;
 			idx++;
-        }
-        //[종료] set answer
+		}
+		//[종료] set answer
 
 		return answer;
 	}

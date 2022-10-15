@@ -39,7 +39,7 @@ public class Solution12945 {
 		int a1 = 0;
 		int a2 = 1;
 		int a3 = -999;
-		for(int i=2;i<=n;i++){
+		for (int i = 2; i <= n; i++) {
 			a3 = (a1 + a2) % 1234567;
 			a1 = a2 % 1234567;
 			a2 = a3 % 1234567;
