@@ -15,7 +15,7 @@ public class DevStack {
 		stack.clear();       //clear : 전체값 제거
 
 		//[시작] pop없이 반복문
-		for(int i=0;i<stack.size();i++){
+		for (int i = 0; i < stack.size(); i++) {
 			System.out.println(stack.get(i));
 		}
 		//[종료] pop없이 반복문
