@@ -1,5 +1,6 @@
 package dev;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.NoSuchElementException;
 import java.util.PriorityQueue;
@@ -7,16 +8,30 @@ import java.util.PriorityQueue;
 public class DevPriorityQueue {
 	public static void main(String[] args) {
 
-		//[시작] Priority Queue(우선순위 큐) 개념과 동작( https://crazykim2.tistory.com/575 )
+		//[시작] Priority Queue 기본 사용
+		PriorityQueue<Integer> priorityQueueLowest = new PriorityQueue<>(); //낮은 숫자가 우선 순위인 int 형 우선순위 큐 선언
+		PriorityQueue<Integer> priorityQueueHighest = new PriorityQueue<>(Collections.reverseOrder());//높은 숫자가 우선 순위인 int 형 우선순위 큐 선언
+
+		priorityQueueLowest.add(1); //add : 요소 추가 (성공시 : true, 실패시 : exception)
+		priorityQueueLowest.offer(2); //offer : 요소 추가 (성공시 : true, 실패시 : false)
+
+		priorityQueueLowest.remove(); //remove : 우선순위 높은 요소 반환 및 삭제 (성공시 : 값반환, 없을시 : exception)
+		priorityQueueLowest.poll(); //poll : 우선순위 높은 요소 반환 및 삭제 (성공시 : 값반환, 없을시 : false)
+
+		priorityQueueLowest.add(1);
+		priorityQueueLowest.element(); // element : 우선순위 높은 값 반환 (성공시 : 값반환, 없을시 : exception)
+		priorityQueueLowest.peek(); // peek : 우선순위 높은 값 반환 (성공시 : 값반환, 없을시 : false)
+		//[종료] Priority Queue 기본 사용
+
+
+		//[시작] 개념과 동작( https://crazykim2.tistory.com/575 )
 		PriorityQueue<Integer> pq = new PriorityQueue<>();
 		pq.add(1);
 		pq.add(15);
-		pq.offer(10);
 		pq.add(21);
 		pq.add(25);
-		pq.offer(18);
 		pq.add(8);
-		//[종료] Priority Queue(우선순위 큐) 개념과 동작( https://crazykim2.tistory.com/575 )
+		//[종료] 개념과 동작( https://crazykim2.tistory.com/575 )
 
 		//[시작] String에서도 알파벳 순으로 됨
 		PriorityQueue<String> pqs = new PriorityQueue<>();
