@@ -26,30 +26,28 @@ public class Solution42842 {
 	public int[] solution(int brown, int yellow) {
 		int[] answer = new int[2];
 
-		Set<ArrayList> set = new HashSet<>();
+		Set<ArrayList> possibleLists = new HashSet();
 		int temp = brown + yellow;
 		for (int i = 1; i <= temp; i++) {
-			if (temp % i == 0) {
-				ArrayList tempArrayList = new ArrayList();
-				tempArrayList.add(i);
-				tempArrayList.add(temp / i);
-				set.add(tempArrayList);
+			if( temp % i == 0){
+				ArrayList<Integer> possibleList = new ArrayList();
+				possibleList.add(i);
+				possibleList.add(temp / i );
+				possibleLists.add(possibleList);
 			}
 		}
 
-		for (ArrayList arr : set) {
-			int x = (int) arr.get(1);
-			int y = (int) arr.get(0);
-			if (x > y) {
+		for (ArrayList arr : possibleLists) {
+			int x = (int) arr.get(0);
+			int y = (int) arr.get(1);
+			if (x < y) {
 				continue;
 			}
 			if ((x - 2) * (y - 2) == yellow) {
-				System.out.print(x + "," + y);
-				answer[1] = x;
-				answer[0] = y;
+				answer[0] = x;
+				answer[1] = y;
 			}
 		}
-
 
 		return answer;
 	}
