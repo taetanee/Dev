@@ -12,11 +12,17 @@ public class DevString {
 		String y = "a";
 
 		if (x == y) {
-			System.out.println("if");
 			System.out.println("이 쪽이 호출되는 이유는 같은 힙 메모리를 참조하기 때문");
 		} else {
-			System.out.println("else");
+			System.out.println("호출 안됨");
 		}
 
+		x += "b";
+		y += "b";
+		if (x == y) {
+			System.out.println("호출 안됨");
+		} else {
+			System.out.println("이 쪽이 호출되는 이유는 힙 메모리가 달라졌기 때문");
+		}
 	}
 }
