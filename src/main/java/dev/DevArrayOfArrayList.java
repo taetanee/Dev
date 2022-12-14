@@ -10,5 +10,13 @@ public class DevArrayOfArrayList {
 
 		ArrayList<Integer[]> arrayList2 = new ArrayList<>();
 		arrayList2.add(new Integer[2]);
+
+
+		ArrayList<Integer[][]> arrayList3 = new ArrayList<>();
+
+		Integer[][] temp = new Integer[1][2];
+		temp[0][0] = 1;
+		temp[0][1] = 2;
+		arrayList3.add(temp);
 	}
 }
