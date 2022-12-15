@@ -1,8 +1,8 @@
 package solution;
 
 /*
-문제제에에목
-https://programmers.co.kr/learn/courses/30/lessons/xxxxx
+나머지 구하기
+https://school.programmers.co.kr/learn/courses/30/lessons/120810
  */
 
 public class Solution120810 {
