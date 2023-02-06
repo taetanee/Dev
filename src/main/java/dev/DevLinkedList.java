@@ -39,18 +39,6 @@ public class DevLinkedList {
 				tail = head;
 		}
 
-		public void addLast(Object input) {
-			Node newNode = new Node(input); //노드 생성
-
-			if(size == 0) //리스트의 노드가 없는 경우, 첫번째 노드로 추가하는 메소드 사용
-				addFirst(input);
-			else {
-				tail.next = newNode; //마지막 노드의 다음 노드로 생성한 노드를 지정
-				tail = newNode; //마지막 노드를 갱신
-				size++;
-			}
-		}
-
 		Node node(int index) {
 			Node x = head;
 			for(int i = 0; i < index; i++)
