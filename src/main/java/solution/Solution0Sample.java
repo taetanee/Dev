@@ -11,15 +11,15 @@ public class Solution0Sample {
 	public static void main(String[] args) {
 
 		try {
-			Solution0Sample s1 = new Solution0Sample();
-			System.out.println(s1.solution());
+			Solution0Sample _s = new Solution0Sample();
+			System.out.println(_s.solution());
 		} catch (Exception e){
 			e.printStackTrace();
 		}
 
 		try {
-			Solution0Sample s2 = new Solution0Sample();
-			System.out.println(s2.solution());
+			Solution0Sample _s = new Solution0Sample();
+			System.out.println(_s.solution());
 		} catch (Exception e){
 			e.printStackTrace();
 		}
