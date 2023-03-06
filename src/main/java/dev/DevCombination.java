@@ -6,14 +6,11 @@ package dev;
 public class DevCombination {
 	public static void main(String[] args) {
 
-		int n = 4;
-		int arr[] = {1,2,3,4};
+		int arr[] = {1,2,3,4,5};
+		int n = arr.length;
 		boolean[] visited = new boolean[n];
 
-		for (int i = 1; i <= n; i++) {
-			System.out.println("["+n + " 개 중에서 " + i + " 개 뽑기"+"]");
-			combination(arr, visited, 0, n, i);
-		}
+		combination(arr, visited, 0, n, 4);
 
 	}
 
