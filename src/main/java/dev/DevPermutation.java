@@ -5,12 +5,12 @@ package dev;
  */
 public class DevPermutation {
 	public static void main(String[] args) {
-		int n = 3;
 		int[] arr = {1, 2, 3};
+		int n = arr.length;
 		int[] output = new int[n];
 		boolean[] visited = new boolean[n];
 
-		permutation(arr, output, visited, 0, n, 2);
+		permutation(arr, output, visited, 0, n, 3);
 	}
 
 	// 사전순으로 순열 구하기
