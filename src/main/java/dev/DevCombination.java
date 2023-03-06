@@ -13,14 +13,6 @@ public class DevCombination {
 		combination(arr, visited, 0, n, 4);
 
 	}
-
-	/**
-	 * @param arr
-	 * @param visited
-	 * @param start
-	 * @param n
-	 * @param r
-	 */
 	static public void combination(int arr[], boolean[] visited, int start, int n, int r) {
 		if (r == 0) {
 			print(arr, visited, n);
