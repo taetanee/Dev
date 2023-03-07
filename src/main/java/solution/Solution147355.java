@@ -36,12 +36,12 @@ public class Solution147355 {
 		int pLength = p.length();
 		int lengthTemp = tLength - pLength + 1;
 
-		for(int i=0;i<lengthTemp; i++){
-		    if( Integer.parseInt(p) >= Integer.parseInt(t.substring(i, pLength + i)) ){
-			answer++;
-		    }
+		for (int i = 0; i < lengthTemp; i++) {
+			if (Double.parseDouble(p) >= Double.parseDouble(t.substring(i, pLength + i))) {
+				answer++;
+			}
 		}
 
 		return answer;
-    	}
+	}
 }
