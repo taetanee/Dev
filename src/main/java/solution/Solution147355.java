@@ -32,6 +32,16 @@ public class Solution147355 {
 
 	public int solution(String t, String p) {
 		int answer = 0;
+		int tLength = t.length();
+		int pLength = p.length();
+		int lengthTemp = tLength - pLength + 1;
+
+		for(int i=0;i<lengthTemp; i++){
+		    if( Integer.parseInt(p) >= Integer.parseInt(t.substring(i, pLength + i)) ){
+			answer++;
+		    }
+		}
+
 		return answer;
-	}
+    	}
 }
