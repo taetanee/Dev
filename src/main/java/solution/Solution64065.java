@@ -49,19 +49,26 @@ public class Solution64065 {
 		}
 	}
 
-	public static int[] solution(String s) {
+	public int[] solution(String s) {
+
 		Set<String> set = new HashSet<>();
-		String[] arr = s.replaceAll("[{]", " ").replaceAll("[}]", " ").trim().split(" , ");
-		Arrays.sort(arr, (a, b)->{
-			return a.length() - b.length();
-		});
-		int[] answer = new int[arr.length];
-		int idx = 0;
-		for(String s1 : arr) {
-			for(String s2 : s1.split(",")) {
-				if(set.add(s2)) answer[idx++] = Integer.parseInt(s2);
+		String [] sArray = s.replace("{{","").replace("}}","").split("\\}," + "\\{");
+
+		Arrays.sort(sArray, (a, b) -> {return a.length() - b.length();});
+
+		int[] answer = new int[sArray.length];
+
+		int idx = 0 ;
+		for(int i=0; i<sArray.length; i++){
+		    String rawData = sArray[i];
+		    String[] rawDataArray = rawData.split(",");
+		    for(int j=0;j<rawDataArray.length;j++){
+			if(set.add(rawDataArray[j])) {
+			    answer[idx++] = Integer.parseInt(rawDataArray[j]);
 			}
+		    }
 		}
+
 		return answer;
-	}
+    	}
 }
