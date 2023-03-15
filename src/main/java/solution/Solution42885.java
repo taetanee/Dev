@@ -3,7 +3,10 @@ package solution;
 /*
 구명보트
 https://school.programmers.co.kr/learn/courses/30/lessons/42885
+https://kunduz.tistory.com/367 (참고해서 풀었음)
  */
+
+import java.util.Arrays;
 
 public class Solution42885 {
 	public static void main(String[] args) {
@@ -25,6 +28,17 @@ public class Solution42885 {
 
 	public int solution(int[] people, int limit) {
 		int answer = 0;
+		Arrays.sort(people);
+		int index = 0;
+		for (int i = people.length - 1; i >= 0; i--) {
+			if (index > i) {
+				break;
+			}
+			if (people[i] + people[index] <= limit) {
+				index++;
+			}
+			answer++;
+		}
 		return answer;
 	}
 }
