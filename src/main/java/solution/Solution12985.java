@@ -1,8 +1,8 @@
 package solution;
 
 /*
-문제제에에목
-https://programmers.co.kr/learn/courses/30/lessons/xxxxx
+GPT 도움 받음
+https://school.programmers.co.kr/learn/courses/30/lessons/12985
  */
 
 public class Solution12985 {
@@ -14,20 +14,20 @@ public class Solution12985 {
 		} catch (Exception e){
 			e.printStackTrace();
 		}
-
-//		try {
-//			Solution12985 _s = new Solution12985();
-//			System.out.println(_s.solution());
-//		} catch (Exception e){
-//			e.printStackTrace();
-//		}
 	}
 
-	public int solution(int n, int a, int b){
+	public int solution(int n, int a, int b) {
 		int answer = 0;
 
-		// [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
-		System.out.println("Hello Java");
+		int aTemp = a;
+		int bTemp = b;
+
+		while ( aTemp != bTemp){
+			answer++;
+
+			aTemp = (aTemp + 1 ) / 2;
+			bTemp = (bTemp + 1 ) / 2;
+		}
 
 		return answer;
 	}
