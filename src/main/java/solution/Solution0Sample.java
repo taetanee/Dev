@@ -24,6 +24,13 @@ public class Solution0Sample {
 		} catch (Exception e){
 			e.printStackTrace();
 		}
+
+		try {
+			Solution0Sample _s = new Solution0Sample();
+			System.out.println(_s.solution());
+		} catch (Exception e){
+			e.printStackTrace();
+		}
 	}
 
 	public int solution() {
