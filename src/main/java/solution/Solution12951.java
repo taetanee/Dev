@@ -16,50 +16,14 @@ public class Solution12951 {
 		System.out.println(s2.solution("For The Last Week"));
 	}
 
-//	public String solution(String s) {
-//		String answer = "";
-//
-//		boolean nextChar = true;
-//		for( char c : s.toCharArray()) {
-//			if(nextChar == true && c >= 'a' && c <= 'z'){
-//				answer += (char) (c - 32);
-//			} else if(nextChar == false && c >= 'A' && c <= 'Z'){
-//				answer += (char) (c + 32);
-//			} else {
-//				answer += c;
-//			}
-//
-//			if(c == ' '){
-//				nextChar = true;
-//			} else {
-//				nextChar = false;
-//			}
-//
-//		}
-//		return answer;
-//	}
-
 	public String solution(String s) {
 		String answer = "";
 
 		for (int i = 0; i < s.length(); i++) {
-			boolean upperFlag = false;
-			char c = s.charAt(i);
-
-			if (i == 0) {
-				upperFlag = true;
-			} else if (i >= 1 && s.charAt(i - 1) == ' ') {
-				upperFlag = true;
-			} else if (i >= 1 && s.charAt(i - 1) != ' ') {
-				upperFlag = false;
+			if( i == 0 || s.charAt(i - 1) == ' ') {
+				answer += Character.toUpperCase(s.charAt(i));
 			} else {
-				upperFlag = false;
-			}
-
-			if (upperFlag == true) {
-				answer += Character.toUpperCase(c);
-			} else {
-				answer += Character.toLowerCase(c);
+				answer += Character.toLowerCase(s.charAt(i));
 			}
 		}
 
