@@ -99,4 +99,5 @@ public class SolutionTenretnimuz_2 {
 
 		return answer;
 	}
+
 }
